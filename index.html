@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Latifatul Khasanah — Digital Marketing & Performance Marketer Portfolio</title>
-<meta name="description" content="Portfolio Latifatul Khasanah — Digital Marketing Specialist & Performance Marketer.">
+<meta name="description" content="Latifatul Khasanah — Digital Marketing Specialist & Performance Marketer portfolio.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -271,10 +271,25 @@
     font-size:0.9rem;
     color:#3a3327;
   }
-  .result-edit{
+  .stat-list{
+    list-style:none;
+    margin:0; padding:0;
+    display:flex; flex-direction:column; gap:8px;
+  }
+  .stat-list li{
+    font-size:0.87rem;
+    color:#3a3327;
+    padding-left:14px;
+    position:relative;
+  }
+  .stat-list li::before{
+    content:"★";
+    position:absolute; left:0; top:1px;
+    color:#B4784F;
+    font-size:0.7rem;
+  }
+  .stat-list strong{
     color:#9C6B1F;
-    font-style:italic;
-    border-bottom:1px dashed #C79A4E;
   }
   .case-tools{display:flex; flex-wrap:wrap; gap:6px; margin-top:auto; padding-top:8px;}
   .case-tools span{
@@ -330,11 +345,62 @@
     border-top:1px solid var(--line);
   }
 
+  /* APPROACH / PYRAMID */
+  .approach-grid{
+    display:grid;
+    grid-template-columns:0.85fr 1.15fr;
+    gap:56px;
+    align-items:center;
+  }
+  .pyramid-box{
+    background:var(--bg-alt);
+    border:1px solid var(--line);
+    border-radius:4px;
+    padding:24px 20px;
+  }
+  .pyramid-box svg{width:100%; height:auto; display:block;}
+  .pyramid-caption{
+    display:flex; justify-content:center; gap:8px; flex-wrap:wrap;
+    margin-top:18px;
+  }
+  .approach-copy p{color:var(--text-muted); margin-bottom:16px;}
+  .approach-copy ul{
+    margin:0; padding:0; list-style:none;
+    display:flex; flex-direction:column; gap:10px;
+  }
+  .approach-copy ul li{
+    color:var(--text);
+    font-size:0.92rem;
+    padding-left:16px;
+    position:relative;
+  }
+  .approach-copy ul li::before{
+    content:"—";
+    position:absolute; left:0; top:0;
+    color:var(--mint);
+  }
+
+  /* TIMELINE bullets */
+  .tl-bullets{
+    list-style:none; margin:10px 0 0; padding:0;
+    display:flex; flex-direction:column; gap:6px;
+  }
+  .tl-bullets li{
+    font-size:0.87rem;
+    color:var(--text-muted);
+    padding-left:14px;
+    position:relative;
+  }
+  .tl-bullets li::before{
+    content:"·";
+    position:absolute; left:0; top:0;
+    color:var(--amber);
+    font-weight:700;
+  }
+  .tl-bullets strong{ color:var(--text); }
+
   @media (max-width:820px){
-    .hero-grid{grid-template-columns:1fr;}
-    .about-grid{grid-template-columns:1fr;}
-    .case-grid{grid-template-columns:1fr;}
-    .navlinks{display:none;}
+    .approach-grid{grid-template-columns:1fr;}
   }
   @media (prefers-reduced-motion: reduce){
     .chart-line, .chart-area{animation:none; stroke-dashoffset:0; opacity:1;}
@@ -347,10 +413,11 @@
   <div class="wrap">
     <div class="brand">Latifatul <span>Khasanah</span></div>
     <ul class="navlinks">
-      <li><a href="#about">Tentang</a></li>
-      <li><a href="#cases">Studi Kasus</a></li>
-      <li><a href="#experience">Pengalaman</a></li>
-      <li><a href="#contact">Kontak</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#approach">Approach</a></li>
+      <li><a href="#cases">Case Studies</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
   </div>
 </nav>
@@ -359,18 +426,18 @@
   <div class="wrap hero-grid">
     <div>
       <div class="eyebrow">Digital Marketing Specialist · Jakarta</div>
-      <h1>Mengubah <em>ad spend</em><br>jadi kurva pertumbuhan.</h1>
-      <p class="lead">Performance marketer dengan pengalaman mengelola campaign Meta, Google & TikTok Ads — dari perencanaan budget, optimasi data, sampai reporting yang jadi bahan keputusan stakeholder.</p>
+      <h1>Turning ad spend<br>into growth curves.</h1>
+      <p class="lead">Performance marketer with 4+ years of experience running Google, Meta & Targetoo ad campaigns — from PPC strategy and budgeting to reporting that drives real business results.</p>
       <div class="cta-row">
-        <a class="btn btn-primary" href="mailto:tifa8405@gmail.com">Email Saya</a>
+        <a class="btn btn-primary" href="mailto:tifa8405@gmail.com">Email Me</a>
         <a class="btn btn-ghost" href="https://www.linkedin.com/in/latifatulkhasanah/" target="_blank" rel="noopener">LinkedIn ↗</a>
-        <a class="btn btn-ghost" href="./CV-Latifatul-Khasanah.pdf" target="_blank">Unduh CV</a>
+        <a class="btn btn-ghost" href="./CV-Latifatul-Khasanah.pdf" target="_blank">Download CV</a>
       </div>
     </div>
     <div class="chart-box">
       <div class="cap">
         <span>Campaign Performance</span>
-        <span>Reach → Engagement → Konversi</span>
+        <span>Reach → Engagement → Conversion</span>
       </div>
       <svg viewBox="0 0 400 180" preserveAspectRatio="none">
         <defs>
@@ -388,9 +455,9 @@
         <path class="chart-line" d="M0,150 L40,140 L90,145 L140,110 L190,120 L240,80 L290,90 L340,45 L400,20"/>
       </svg>
       <div class="chart-tags">
-        <span class="chip">Meta Ads</span>
         <span class="chip">Google Ads</span>
-        <span class="chip">TikTok Ads</span>
+        <span class="chip">Meta Ads</span>
+        <span class="chip">Targetoo</span>
         <span class="chip">SEM</span>
       </div>
     </div>
@@ -400,40 +467,79 @@
 <section id="about">
   <div class="wrap about-grid">
     <div>
-      <div class="eyebrow">Tentang</div>
-      <h2 style="margin-bottom:20px;">Latar belakang unik: relasi internasional bertemu performance marketing.</h2>
-      <p>Saya memulai karier di dunia komunikasi dan relasi internasional, lalu beralih ke digital marketing — kombinasi ini membuat saya terbiasa memahami audiens lintas budaya dan menyampaikan pesan yang tepat sasaran di berbagai platform.</p>
-      <p>Empat tahun terakhir, saya fokus di performance marketing: mengelola campaign berbayar, menganalisis data untuk optimasi budget, dan menyusun laporan yang membantu stakeholder mengambil keputusan lebih cepat dan lebih tepat.</p>
+      <div class="eyebrow">About</div>
+      <h2 style="margin-bottom:20px;">4 years of digital marketing expertise.</h2>
+      <p>Hi, I'm Tifa — a Creative & Digital Marketing Specialist with a background in International Relations. I spent 3 years as a social media strategist at an agency, and for the past year I've focused on performance marketing — covering brand awareness, user acquisition, and retention through paid and organic channels.</p>
+      <p>I live to craft branded, multi-channel campaigns backed by consumer research and analytics. Deep insight into what motivates an audience, and where to best reach them, removes the guesswork from campaign development — resulting in sharper creative with the right words and images in the right place.</p>
+      <p>My expertise spans copywriting, content management, digital advertising, and photography, letting me craft compelling digital experiences that resonate with diverse audiences.</p>
     </div>
     <div class="skill-groups">
       <div>
-        <span class="skill-group-label">Paid Media</span>
+        <span class="skill-group-label">Paid Ads</span>
         <div class="tag-row">
-          <span class="tag">Meta Ads Manager</span>
           <span class="tag">Google Ads</span>
-          <span class="tag">TikTok Ads</span>
-          <span class="tag">SEM</span>
-          <span class="tag">Keyword Planner</span>
+          <span class="tag">Meta Ads</span>
+          <span class="tag">Targetoo</span>
         </div>
       </div>
       <div>
-        <span class="skill-group-label">Marketing & Konten</span>
+        <span class="skill-group-label">Keyword Research</span>
         <div class="tag-row">
-          <span class="tag">Social Media Strategy</span>
-          <span class="tag">Content Management</span>
-          <span class="tag">Copywriting</span>
-          <span class="tag">Digital Planning</span>
+          <span class="tag">SEMrush</span>
+          <span class="tag">Google Trends</span>
+          <span class="tag">Ahrefs</span>
+          <span class="tag">Google Keyword Planner</span>
         </div>
       </div>
       <div>
-        <span class="skill-group-label">Tools & Lainnya</span>
+        <span class="skill-group-label">Competitor Analysis</span>
         <div class="tag-row">
-          <span class="tag">Photo Editing</span>
-          <span class="tag">Reporting</span>
-          <span class="tag">Market Research</span>
-          <span class="tag">Komunikasi</span>
+          <span class="tag">SEMrush</span>
+          <span class="tag">Similarweb</span>
+          <span class="tag">Ahrefs</span>
         </div>
       </div>
+      <div>
+        <span class="skill-group-label">Other Skills</span>
+        <div class="tag-row">
+          <span class="tag">Canva</span>
+          <span class="tag">Looker Studio</span>
+          <span class="tag">Google Analytics</span>
+          <span class="tag">VN (Video Editing)</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="approach">
+  <div class="wrap approach-grid">
+    <div class="pyramid-box">
+      <svg viewBox="0 0 300 230" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="150,14 186,74 114,74" fill="#E3A857"/>
+        <polygon points="114,74 186,74 214,140 86,140" fill="#EAC17E"/>
+        <polygon points="86,140 214,140 246,206 54,206" fill="#F2DBA8"/>
+        <text x="150" y="50" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="9" fill="#10202C">VALUES</text>
+        <text x="150" y="103" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="8.5" fill="#10202C">EMOTIONAL &amp;</text>
+        <text x="150" y="115" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="8.5" fill="#10202C">FUNCTIONAL BENEFIT</text>
+        <text x="150" y="178" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="8.5" fill="#10202C">REASON TO BELIEVE</text>
+      </svg>
+      <div class="pyramid-caption">
+        <span class="chip">Always-on Campaign</span>
+        <span class="chip">Thematic Campaign</span>
+        <span class="chip">Tactical Campaign</span>
+      </div>
+    </div>
+    <div class="approach-copy">
+      <div class="eyebrow">Approach</div>
+      <h2 style="margin-bottom:20px;">Strategy before spend.</h2>
+      <p>Every campaign I run starts with brand strategy, not budget. I build out core values and positioning, define the emotional and functional benefit for the audience, and back it with a clear reason to believe — before a single rupiah goes into media.</p>
+      <p>That foundation feeds into a communication strategy split across three campaign types, each calibrated to a different stage of the funnel:</p>
+      <ul>
+        <li><strong>Always-on Campaign</strong> — continuous, always-running activity that sustains reach and retargeting</li>
+        <li><strong>Thematic Campaign</strong> — seasonal or brand-moment pushes tied to a bigger narrative</li>
+        <li><strong>Tactical Campaign</strong> — short, targeted bursts built around a specific conversion goal</li>
+      </ul>
     </div>
   </div>
 </section>
@@ -441,63 +547,77 @@
 <section id="cases" style="background:var(--bg-alt2); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
   <div class="wrap">
     <div class="section-head">
-      <h2>Studi Kasus</h2>
+      <h2>Case Studies</h2>
       <span class="section-num mono">03 campaign highlights</span>
     </div>
     <div class="case-grid">
 
       <div class="case-card">
-        <span class="co">Simmer Asia Digital — Performance Marketer</span>
-        <h3>Optimasi budget campaign multi-platform</h3>
+        <span class="co">Four Points by Sheraton Tunjungan Plaza, Surabaya</span>
+        <h3>Building a PPC program from scratch</h3>
         <div class="case-block">
-          <div class="case-block-label">Tantangan</div>
-          <p>Budget iklan tersebar di banyak channel tanpa arah optimasi yang jelas.</p>
+          <div class="case-block-label">Challenge</div>
+          <p>The hotel had no PPC program in place and needed a paid acquisition channel built from the ground up to drive direct bookings.</p>
         </div>
         <div class="case-block">
-          <div class="case-block-label">Strategi</div>
-          <p>Menerapkan strategi performance marketing berbasis data dan realokasi budget ke channel terbaik.</p>
+          <div class="case-block-label">Approach</div>
+          <p>Set the PPC roadmap and KPIs, audience targeting, campaign structure, and keyword research, then ran daily optimization, budgeting, and phase-by-phase reporting on Google & Meta Ads.</p>
         </div>
         <div class="case-block">
-          <div class="case-block-label">Hasil</div>
-          <p class="result-edit">+28% efisiensi budget dalam 3 bulan</p>
+          <div class="case-block-label">Results</div>
+          <ul class="stat-list">
+            <li><strong>150% of target achieved</strong> — 28,000+ website visits and 7,820 room nights in the first 5 months of the Google Ads campaign</li>
+            <li><strong>95%</strong> of target keywords ranked in average position #1 on Google Search</li>
+            <li><strong>59.37%</strong> CTR growth on Meta in the same 5-month period</li>
+            <li>Ranked <strong>2nd best</strong> among Indonesian hotels for conversion rate within the first 3 months</li>
+          </ul>
         </div>
-        <div class="case-tools"><span>Meta Ads</span><span>Google Ads</span><span>Reporting</span></div>
+        <div class="case-tools"><span>Google Ads</span><span>Meta Ads</span><span>Keyword Planner</span></div>
       </div>
 
       <div class="case-card">
-        <span class="co">Boring Ape — Performance Specialist</span>
-        <h3>Peluncuran produk lewat kolaborasi influencer</h3>
+        <span class="co">Desa Potato Head, Bali</span>
+        <h3>Scaling PPC for a lifestyle hospitality brand</h3>
         <div class="case-block">
-          <div class="case-block-label">Tantangan</div>
-          <p>Brand awareness rendah di kalangan demografis target untuk produk baru.</p>
+          <div class="case-block-label">Challenge</div>
+          <p>Needed a paid search & social program built from scratch to drive qualified traffic and leads for a high-end lifestyle destination.</p>
         </div>
         <div class="case-block">
-          <div class="case-block-label">Strategi</div>
-          <p>Riset pasar & kompetitor, lalu eksekusi kolaborasi influencer terarah.</p>
+          <div class="case-block-label">Approach</div>
+          <p>Same end-to-end PPC roadmap — targeting, campaign structure, keyword research, and ongoing optimization — run across Targetoo, Google & Meta Ads.</p>
         </div>
         <div class="case-block">
-          <div class="case-block-label">Hasil</div>
-          <p class="result-edit">+40% brand awareness pada audiens target</p>
+          <div class="case-block-label">Results</div>
+          <ul class="stat-list">
+            <li><strong>90% of traffic target achieved</strong> — 30,000+ site visits in Q2 since the campaign launched</li>
+            <li><strong>80%</strong> of target keywords ranked in average position #1 on Google Search</li>
+            <li><strong>90% of conversion target achieved</strong> — 7,800+ WhatsApp leads collected in Q2</li>
+            <li><strong>37.15%</strong> CTR growth on Meta within the first 2 months</li>
+          </ul>
         </div>
-        <div class="case-tools"><span>Influencer Mktg</span><span>Content</span><span>Market Research</span></div>
+        <div class="case-tools"><span>Targetoo</span><span>Google Ads</span><span>Meta Ads</span></div>
       </div>
 
       <div class="case-card">
-        <span class="co">Marketif Indonesia — Social Media Specialist</span>
-        <h3>Pertumbuhan engagement lewat content calendar terstruktur</h3>
+        <span class="co">Multi-client — Social Media & Content Marketing</span>
+        <h3>Organic growth through structured content strategy</h3>
         <div class="case-block">
-          <div class="case-block-label">Tantangan</div>
-          <p>Engagement stagnan, jadwal posting tidak konsisten di berbagai klien.</p>
+          <div class="case-block-label">Challenge</div>
+          <p>Clients needed consistent organic growth and a clearer content direction across their social channels.</p>
         </div>
         <div class="case-block">
-          <div class="case-block-label">Strategi</div>
-          <p>Membangun content calendar terstruktur & analisis performa bulanan untuk iterasi strategi.</p>
+          <div class="case-block-label">Approach</div>
+          <p>Defined problem statements and goals, brand identity and audience targeting, content pillars and planning, content visualization, and a measurement plan for each client.</p>
         </div>
         <div class="case-block">
-          <div class="case-block-label">Hasil</div>
-          <p class="result-edit">+35% engagement rate dalam 6 bulan</p>
+          <div class="case-block-label">Results</div>
+          <ul class="stat-list">
+            <li>Strategized social campaigns that helped clients reach untapped potential customers</li>
+            <li>Built structured content calendars covering scheduling, posting, and campaigns</li>
+            <li>Drove daily profile updates that boosted online presence across clients</li>
+          </ul>
         </div>
-        <div class="case-tools"><span>Content Calendar</span><span>Social Media</span><span>Analytics</span></div>
+        <div class="case-tools"><span>Content Strategy</span><span>Social Media</span><span>Canva</span></div>
       </div>
 
     </div>
@@ -507,27 +627,37 @@
 <section id="experience">
   <div class="wrap">
     <div class="section-head">
-      <h2>Pengalaman</h2>
-      <span class="section-num mono">2020 — sekarang</span>
+      <h2>Experience</h2>
+      <span class="section-num mono">2020 — present</span>
     </div>
     <div class="timeline">
       <div class="tl-item">
-        <div class="tl-date">Des 2025 — Sekarang</div>
+        <div class="tl-date">Dec 2025 — Present</div>
         <h3>Digital Ads Specialist</h3>
         <div class="co">Smartick Indonesia · Jakarta</div>
+        <ul class="tl-bullets">
+          <li>Split ad budget by priority across Meta and Google based on channel performance</li>
+          <li>Increased leads by <strong>+40%</strong></li>
+          <li>Helped turn prospecting leads into <strong>3X ROAS</strong></li>
+        </ul>
       </div>
       <div class="tl-item">
-        <div class="tl-date">Agu 2025 — Des 2025</div>
+        <div class="tl-date">Aug 2025 — Dec 2025</div>
         <h3>Digital Planner</h3>
-        <div class="co">dentsu X · Indonesia</div>
+        <div class="co">dentsu X · Indonesia <span style="opacity:.7;">(Probation)</span></div>
+        <ul class="tl-bullets">
+          <li>Supported media placement planning aligned to brand needs</li>
+          <li>Optimized campaigns with budgets of <strong>&gt;100M IDR</strong></li>
+          <li>Learned cross-channel placement integration</li>
+        </ul>
       </div>
       <div class="tl-item">
-        <div class="tl-date">Okt 2023 — Agu 2025</div>
+        <div class="tl-date">Oct 2023 — Aug 2025</div>
         <h3>Performance Marketer</h3>
         <div class="co">Simmer Asia Digital · Bali</div>
       </div>
       <div class="tl-item">
-        <div class="tl-date">Jan 2023 — Agu 2024</div>
+        <div class="tl-date">Jan 2023 — Aug 2024</div>
         <h3>Performance Specialist</h3>
         <div class="co">Boring Ape · Bali</div>
       </div>
@@ -537,7 +667,7 @@
         <div class="co">UX Indonesia · Jakarta</div>
       </div>
       <div class="tl-item">
-        <div class="tl-date">Mei 2020 — Des 2022</div>
+        <div class="tl-date">May 2020 — Dec 2022</div>
         <h3>Social Media & Content Specialist</h3>
         <div class="co">Marketif Indonesia · Bandar Lampung</div>
       </div>
@@ -547,18 +677,19 @@
 
 <section id="contact" class="contact">
   <div class="wrap">
-    <div class="eyebrow" style="justify-content:center;">Kontak</div>
-    <h2>Terbuka untuk peran Performance Marketer,<br>Paid Ads Specialist, atau Digital Marketing.</h2>
-    <p>Kirim email atau hubungi lewat LinkedIn — akan saya balas secepatnya.</p>
+    <div class="eyebrow" style="justify-content:center;">Contact</div>
+    <h2>Open to Performance Marketer,<br>Paid Ads Specialist, or Digital Marketing roles.</h2>
+    <p>I hope my work has sparked some ideas — I'd love to explore how we could collaborate. Send an email or reach out on LinkedIn, I'll get back to you soon.</p>
     <div class="cta-row" style="justify-content:center;">
       <a class="btn btn-primary" href="mailto:tifa8405@gmail.com">tifa8405@gmail.com</a>
+      <a class="btn btn-ghost" href="tel:+6282269918861">+62-822-6991-8861</a>
       <a class="btn btn-ghost" href="https://www.linkedin.com/in/latifatulkhasanah/" target="_blank" rel="noopener">LinkedIn ↗</a>
     </div>
   </div>
 </section>
 
 <footer>
-  © <span id="year"></span> Latifatul Khasanah — Dibuat dengan HTML & CSS, di-hosting via GitHub Pages.
+  © <span id="year"></span> Latifatul Khasanah — Built with HTML & CSS, hosted on GitHub Pages.
 </footer>
 
 <script>
